@@ -11,6 +11,6 @@ Pod::Spec.new do |s|
 
   s.source_files = '*.{h,m}'
   s.public_header_files = 'CDZPinger.h'
-  s.frameworks = 'Foundation', 'CoreServices'
+  s.frameworks = 'CFNetwork'
   s.requires_arc = true
 end
