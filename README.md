@@ -2,7 +2,7 @@
 
 Easy-to-use ICMP ping for iOS - just create a CDZPinger and you delegate gets a callback every second with the average ping time.
 
-## Usage
+## Installation
 
 Add the dependency to your `Podfile`:
 
@@ -14,14 +14,16 @@ pod 'CDZPinger'
 
 Run `pod install` to install the dependencies.
 
-Then `#import "CDZPinger.h"` and:
+## Usage
+
+`#import "CDZPinger.h"` and:
 
 ```objc
 CDZPinger *pinger = [[CDZPinger alloc] initWithHost:@"google.com"];
-// be sure to keep a strong reference to this, maybe in a property somewhere
+// keep a strong reference to pinger, maybe in a property somewhere
 
 pinger.delegate = self;
-// assuming this object is your delegate
+// (assuming self is your CDZPingerDelegate)
 ```
 
 In your delegate:
@@ -45,11 +47,11 @@ There's also some chance it'll work on OS X, but again, I haven't tested it ther
 
 [MIT License](http://http://opensource.org/licenses/mit-license.php). See LICENSE for the full details.
 
-## Author
+## Developer
 
 Chris Dzombak, with ICMP ping code from Apple sample code.
 
+* [chris.dzombak.name](http://chris.dzombak.name/)
 * chris@chrisdzombak.net
-* [chris.dzombak.name](http://chris.dzombak.name)
-* [twitter: @cdzombak](http://twitter.com/cdzombak)
-* [ADN: @dzombak](https://alpha.app.net/dzombak/)
+* [t@cdzombak](https://twitter.com/cdzombak)
+* [a@dzombak](https://alpha.app.net/dzombak)
