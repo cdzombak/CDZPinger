@@ -72,10 +72,12 @@
     }];
     NSTimeInterval averageTime = totalTime/(double)timeCount;
 
-    id delegate = self.delegate;
-    if ([delegate respondsToSelector:@selector(pinger:didUpdateWithAverageSeconds:)]) {
-        [delegate pinger:self didUpdateWithAverageSeconds:averageTime];
-    }
+    dispatch_async(dispatch_get_main_queue(), ^{
+        id delegate = self.delegate;
+        if ([delegate respondsToSelector:@selector(pinger:didUpdateWithAverageSeconds:)]) {
+            [delegate pinger:self didUpdateWithAverageSeconds:averageTime];
+        }
+    });
 }
 
 - (void)sendPing
