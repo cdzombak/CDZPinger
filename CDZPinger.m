@@ -23,7 +23,7 @@
     if (self) {
         self.simplePing.delegate = self;
         self.domainOrIp = domainOrIp;
-        self.averageNumberOfPings = 6;
+        self.averageNumberOfPings = 8;
         self.pingWaitTime = 1.0;
     }
     return self;
