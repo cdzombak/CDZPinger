@@ -7,8 +7,7 @@ Pod::Spec.new do |s|
   s.author       = { 'Chris Dzombak' => 'chris@chrisdzombak.net' }
 
   s.source       = { :git => 'https://github.com/cdzombak/CDZPinger.git', :tag => 'v1.0.1' }
-  s.platform     = :ios, '5.0'
-
+  
   s.source_files = '*.{h,m}'
   s.public_header_files = 'CDZPinger.h'
   s.frameworks = 'CFNetwork'
